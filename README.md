@@ -49,7 +49,7 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 
 Despite I knew basics of HTML, CSS and JavaScript, I had to use additional resources which were so useful. In order to understand the logic and implement more functions, I utilized w3schools. The instructions for the project were clear and helped me alot to complete it successfully.
 
-https://www.w3schools.com/
+https://stackoverflow.com/ | https://www.w3schools.com/ | https://www.w3docs.com/ | https://www.youtube.com/
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words)
 
