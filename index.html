@@ -7,10 +7,10 @@
 
     <title>Light and Sound Memory Game</title>
 
-    <!-- import the webpage's stylesheet -->
+    <!-- import stylesheet -->
     <link rel="stylesheet" href="/style.css" />
 
-    <!-- import the webpage's javascript file -->
+    <!-- import javascript file -->
     <script src="/script.js" defer></script>
   </head>
   <body>
@@ -18,8 +18,11 @@
     <h1>Light and Sound Memory Game</h1>
     
     <p> 
+      
     Welcome to the game! Repeat back the pattern by pressing buttons.
+      
     </p>
+    
       
     <button id="startBtn" onclick="startGame()">
       Start
@@ -27,14 +30,40 @@
     <button id="stopBtn" class="hidden" onclick="stopGame()"> 
       Stop
     </button>
-    
-    <div id="gameButtonArea">
-      <button id="button1" onclick="guess(1)" onmousedown="startTone(1)" onmouseup="stopTone()"></button>
-      <button id="button2" onclick="guess(2)" onmousedown="startTone(2)" onmouseup="stopTone()"></button>
-      <button id="button3" onclick="guess(3)" onmousedown="startTone(3)" onmouseup="stopTone()"></button>
-      <button id="button4" onclick="guess(4)" onmousedown="startTone(4)" onmouseup="stopTone()"></button> 
+
+    <div id="mistakes">
+    <b>Mistakes:</b><span id="mistake-counter"><!--Mistake counter--></span>
+    </div>
+
+    <div id="score">
+     <b>Score:</b><span id="score-counter"><!--Score counter--></span>
+    </div>
+
+    <div id="base-timer">
+      <svg class="base-timer__svg" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <g class="base-timer__circle">
+          <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45" />
+          <path id="base-timer-path-remaining" stroke-dasharray="283" class="base-timer__path-remaining" 
+          d="
+            M 50, 50
+            m -45, 0
+            a 45,45 0 1,0 90,0
+            a 45,45 0 1,0 -90 0
+          "></path>
+        </g>
+      </svg>
+      <span id="base-timer-label" class="base-timer__label"><!--Remaining time--></span>
     </div>
     
-  
+    <div id="gameButtonArea">
+      <button id="button1" onclick="guess(1)" onmousedown="startTone(1); showImage(1)" onmouseup="stopTone(); hideImage(1)"></button>
+      <button id="button2" onclick="guess(2)" onmousedown="startTone(2); showImage(2)" onmouseup="stopTone(); hideImage(2)"></button>
+      <button id="button3" onclick="guess(3)" onmousedown="startTone(3); showImage(3)" onmouseup="stopTone(); hideImage(3)"></button>
+      <button id="button4" onclick="guess(4)" onmousedown="startTone(4); showImage(4)" onmouseup="stopTone(); hideImage(4)"></button>
+      <button id="button5" onclick="guess(5)" onmousedown="startTone(5); showImage(5)" onmouseup="stopTone(); hideImage(5)"></button>
+      <button id="button6" onclick="guess(6)" onmousedown="startTone(6); showImage(6)" onmouseup="stopTone(); hideImage(6)"></button>
+      
+    </div>
+
   </body>
 </html>
